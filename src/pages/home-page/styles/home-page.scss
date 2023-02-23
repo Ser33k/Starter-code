@@ -1,0 +1,86 @@
+/// Homepage Styles File
+/// Here we import all the Styles files we need for our Homepage.
+/// 
+
+.home-page {
+    padding: 20px 16px;
+    height: 100vh;
+    background-color: red;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 20px;
+
+}
+
+.card {
+    flex-grow: 1;
+    border-radius: 12px;
+    padding: 30px 20px;
+
+    .card__title {
+        font-size: 2rem;
+        color: black;
+        margin: 10px 0;
+    }
+    
+    .card__description {
+        font-size: 1rem;
+    }
+    
+    .card__button {
+        border: none;
+        background-color: #fff;
+        border-radius: 30px;
+        padding: 15px 20px;
+        font-size: 1rem;
+        line-height: 1rem;
+        color: black;
+        // vertical-align: middle;
+        span {
+            height: 1rem;
+            stroke: red;
+            fill: red;
+            img {
+                line-height: 1rem;
+                vertical-align: middle;
+                g {
+                    path {
+                        stroke: red;
+                    }
+                }
+            }
+            // vertical-align: middle;
+        }
+
+        &:hover {
+            color: red;
+            
+            span {
+                img {
+                    fill: red;
+                }
+            }
+        }
+    }
+
+    
+}
+
+.card--green {
+    background-color: #E5EFE2;
+}
+
+.card--blue {
+    background-color: #E4E9F3;
+}
+
+.card--yellow {
+    background-color: #F4F1E4;
+}
+
+
+
