@@ -4,16 +4,21 @@
 @import "styles/normalize.scss";
 @import "styles/root.scss";
 @import "styles/fonts.scss";
-@import "../pages/home-page/styles/home-page.scss";
+
+html {
+  box-sizing: border-box;
+}
 
 body {
-  font-family: 'Montserrat','Roboto', sans-serif;
+  font-family: "Montserrat", "Roboto", sans-serif;
   font-size: 16px;
   color: var(--color-primary);
-  padding: 20px 16px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 p {
   color: var(--color-on-surface);
 }
-

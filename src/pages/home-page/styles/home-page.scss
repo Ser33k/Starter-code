@@ -1,86 +1,115 @@
 /// Homepage Styles File
 /// Here we import all the Styles files we need for our Homepage.
-/// 
+///
 
-.home-page {
-    padding: 20px 16px;
-    height: 100vh;
-    background-color: red;
+#home-page {
+  height: 100%;
 }
 
 .cards-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 16px;
+  gap: 16px;
+  max-width: 1200px;
+
+  .card {
+    border-radius: 12px;
+    padding: 24px;
+
     display: flex;
     flex-direction: column;
-    
-    gap: 20px;
+    justify-content: space-between;
 
-}
-
-.card {
-    flex-grow: 1;
-    border-radius: 12px;
-    padding: 30px 20px;
+    .card__icon {
+      width: 3rem;
+    }
 
     .card__title {
-        font-size: 2rem;
-        color: black;
-        margin: 10px 0;
+      font-size: 1.625rem;
+      color: black;
+      margin: 16px 0 0 0;
     }
-    
+
     .card__description {
-        font-size: 1rem;
+      font-size: 1rem;
+      margin-top: 8px;
     }
-    
+
     .card__button {
-        border: none;
-        background-color: #fff;
-        border-radius: 30px;
-        padding: 15px 20px;
-        font-size: 1rem;
-        line-height: 1rem;
-        color: black;
-        // vertical-align: middle;
+      border: none;
+      background-color: #fff;
+      border-radius: 30px;
+      padding: 15px 20px;
+      font-size: 1rem;
+      line-height: 1rem;
+      color: black;
+      transition: 0.1s;
+      width: fit-content;
+      span {
+        height: 1rem;
+        stroke: black;
+        vertical-align: middle;
+      }
+
+      &:hover {
+        color: #001aff;
         span {
-            height: 1rem;
-            stroke: red;
-            fill: red;
-            img {
-                line-height: 1rem;
-                vertical-align: middle;
-                g {
-                    path {
-                        stroke: red;
-                    }
-                }
-            }
-            // vertical-align: middle;
+          stroke: #001aff;
         }
+      }
 
-        &:hover {
-            color: red;
-            
-            span {
-                img {
-                    fill: red;
-                }
-            }
-        }
+      &:active {
+        background-color: #f1f5ff;
+      }
     }
+  }
 
-    
+  .card--green {
+    background-color: #e5efe2;
+  }
+
+  .card--blue {
+    background-color: #e4e9f3;
+  }
+
+  .card--yellow {
+    background-color: #f4f1e4;
+  }
 }
 
-.card--green {
-    background-color: #E5EFE2;
+@media (min-width: 768px) {
+  .cards-container {
+    padding: 0 40px;
+    justify-content: center;
+
+    .card {
+      .card__icon {
+        width: 4.5rem;
+      }
+
+      .card__title {
+        font-size: 1.8rem;
+      }
+
+      .card__description {
+        margin: 16px 0 24px 0;
+      }
+    }
+  }
 }
+@media (min-width: 1024px) {
+  .cards-container {
+    flex-direction: row;
+    max-width: 1150px;
 
-.card--blue {
-    background-color: #E4E9F3;
+    .card {
+      padding: 32px;
+      flex: 1;
+
+      .card__title {
+        margin-top: 24px;
+      }
+    }
+  }
 }
-
-.card--yellow {
-    background-color: #F4F1E4;
-}
-
-
-
