@@ -7,11 +7,12 @@
 
 html {
   box-sizing: border-box;
+  font-size: 14px;
 }
 
 body {
-  font-family: "Montserrat", "Roboto", sans-serif;
-  font-size: 16px;
+  font-family: "Raleway", "Roboto", sans-serif;
+  // font-size: 16px;
   color: var(--color-primary);
   min-height: 100vh;
   display: flex;
